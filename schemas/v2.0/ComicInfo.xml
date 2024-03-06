@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComicInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/ComicCorps/Schemas/main/schemas/v2.0/ComicInfo.xsd">
+  <Title>Airborne</Title>
+  <Series>Green Lantern</Series>
+  <Number>1</Number>
+  <Count>48</Count>
+  <Volume>4</Volume>
+  <Summary>Strap in and hang on as one of DC's icons returns to the forefront in a series by red-hot writer Geoff Johns! Spinning out of the pages of GREEN LANTERN: REBIRTH, Hal Jordan returns as the Emerald Warrior, ready to reclaim his life and the light of the Green Lantern.</Summary>
+  <Notes>Nothing to note.</Notes>
+  <Year>2005</Year>
+  <Month>7</Month>
+  <Day>1</Day>
+  <Penciller>Carlos Pacheco</Penciller>
+  <CoverArtist>Alex Ross, Carlos Pacheco</CoverArtist>
+  <Publisher>DC Comics</Publisher>
+  <Genre>Super-Hero</Genre>
+  <PageCount>48</PageCount>
+  <LanguageISO>en</LanguageISO>
+  <Format>Comic</Format>
+  <BlackAndWhite>No</BlackAndWhite>
+  <Manga>No</Manga>
+  <Characters>Hal Jordan, Jillian Pearlman</Characters>
+  <Teams>Green Lantern Corps, Manhunters</Teams>
+  <Locations>3600 Sectors of Space, California</Locations>
+  <StoryArc>Green Lantern: Rebirth</StoryArc>
+  <AgeRating>Unknown</AgeRating>
+  <Pages>
+    <Page Image="0" Type="FrontCover" DoublePage="false" ImageSize="1234567" Key="" Bookmark="" ImageWidth="1988" ImageHeight="3056"/>
+    <Page Image="1" Type="Story" DoublePage="true" ImageSize="1234567" Key="" Bookmark="" ImageWidth="3976" ImageHeight="3056"/>
+    <Page Image="2" Type="Story" DoublePage="false" ImageSize="1234567" Key="" Bookmark="" ImageWidth="1988" ImageHeight="3056"/>
+    <Page Image="3" Type="BackCover" DoublePage="false" ImageSize="1234567" Key="" Bookmark="" ImageWidth="1988" ImageHeight="3056"/>
+  </Pages>
+</ComicInfo>

@@ -16,7 +16,8 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      #-----
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: apt-get update
         run: sudo apt-get update -y
       - name: Install xmllint
@@ -35,7 +36,8 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      #-----
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: apt-get update
         run: sudo apt-get update -y
       - name: Install xmllint
