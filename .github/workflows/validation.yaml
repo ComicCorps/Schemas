@@ -24,7 +24,7 @@ jobs:
         run: sudo apt-get install -y libxml2-utils
       #-----
       - name: Validate XSD
-        run: xmllint --noout --schema http://www.w3.org/2009/XMLSchema/XMLSchema.xsd schema/v2.0/ComicInfo.xsd
+        run: xmllint --noout --schema http://www.w3.org/2009/XMLSchema/XMLSchema.xsd schemas/v2.0/ComicInfo.xsd
       #-----
       - name: Validate XSD against XML
         run: xmllint --noout --schema schemas/v2.0/ComicInfo.xsd schemas/v2.0/ComicInfo.xml

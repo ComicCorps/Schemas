@@ -1,5 +1,7 @@
 # Schemas
 
+[![Github Action - Validation](https://img.shields.io/github/actions/workflow/status/ComicCorps/Schemas/validation.yaml?branch=main&logo=Github-Actions&label=Validation&style=flat-square)](https://github.com/ComicCorps/Schemas/actions/workflows/validation.yaml)
+
 ## What is it?
 
 `Metadata.xml` is an attempt to create a new schema for digital comic books that fixes the issues I have with the existing `ComicInfo.xml` schema.
