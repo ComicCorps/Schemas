@@ -27,7 +27,7 @@ jobs:
         run: xmllint --noout --schema http://www.w3.org/2009/XMLSchema/XMLSchema.xsd schema/ComicInfo.xsd
       #-----
       - name: Validate XSD against XML
-        run: xmllint --noout --schema schema/ComicInfo.xsd schema/ComicInfo.xml
+        run: xmllint --noout --schema schemas/v2.0/ComicInfo.xsd schemas/v2.0/ComicInfo.xml
 
   validate-metadata:
     name: Validate Metadata
