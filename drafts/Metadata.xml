@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemeLocation="https://raw.githubusercontent.com/ComicCorps/Schemas/main/schemas/drafts/Metadata.xsd">
+  <Issue language="en">
+    <Characters>
+      <Character>
+        <Resources>
+          <Resource source="Comicvine">11202</Resource>
+          <Resource source="Metron">98</Resource>
+        </Resources>
+        <Title>Hal Jordan</Title>
+      </Character>
+      <Character>
+        <Resources>
+          <Resource source="Comicvine">42891</Resource>
+          <Resource source="Metron">3362</Resource>
+        </Resources>
+        <Title>Jillian Pearlman</Title>
+      </Character>
+    </Characters>
+    <CoverDate>2005-07-01</CoverDate>
+    <Credits>
+      <Credit>
+        <Creator>
+          <Resources>
+            <Resource source="Comicvine">10945</Resource>
+            <Resource source="Metron">37</Resource>
+          </Resources>
+          <Title>Alex Ross</Title>
+        </Creator>
+        <Roles>
+          <Role>
+            <Resources>
+              <Resource source="Metron">7</Resource>
+            </Resources>
+            <Title>Cover</Title>
+          </Role>
+        </Roles>
+      </Credit>
+      <Credit>
+        <Creator>
+          <Resources>
+            <Resource source="Comicvine">3590</Resource>
+            <Resource source="Metron">724</Resource>
+          </Resources>
+          <Title>Carlos Pacheco</Title>
+        </Creator>
+        <Roles>
+          <Role>
+            <Resources>
+              <Resource source="Metron">7</Resource>
+            </Resources>
+            <Title>Cover</Title>
+          </Role>
+          <Role>
+            <Resources>
+              <Resource source="Metron">3</Resource>
+            </Resources>
+            <Title>Penciller</Title>
+          </Role>
+        </Roles>
+      </Credit>
+    </Credits>
+    <Format>Comic</Format>
+    <Genres>
+      <Genre>
+        <Resources>
+          <Resource source="Metron">10</Resource>
+        </Resources>
+        <Title>Super-Hero</Title>
+      </Genre>
+    </Genres>
+    <Locations>
+      <Location>
+        <Resources>
+          <Resource source="Comicvine">56427</Resource>
+        </Resources>
+        <Title>3600 Sectors of Space</Title>
+      </Location>
+      <Location>
+        <Resources>
+          <Resource source="Comicvine">55716</Resource>
+        </Resources>
+        <Title>California</Title>
+      </Location>
+    </Locations>
+    <Number>1</Number>
+    <PageCount>48</PageCount>
+    <Resources>
+      <Resource source="Comicvine">111265</Resource>
+      <Resource source="Metron">9778</Resource>
+    </Resources>
+    <Series>
+      <Publisher>
+        <Resources>
+          <Resource source="Comicvine">10</Resource>
+          <Resource source="Metron">2</Resource>
+        </Resources>
+        <Title>DC Comics</Title>
+      </Publisher>
+      <Resources>
+        <Resource source="Comicvine">18216</Resource>
+        <Resource source="Metron">1119</Resource>
+      </Resources>
+      <StartYear>2005</StartYear>
+      <Title>Green Lantern</Title>
+      <Volume>4</Volume>
+    </Series>
+    <StoreDate>2005-05-25</StoreDate>
+    <StoryArcs>
+      <StoryArc>
+        <Number />
+        <Resources>
+          <Resource source="Comicvine">54588</Resource>
+        </Resources>
+        <Title>Green Lantern: Rebirth</Title>
+      </StoryArc>
+    </StoryArcs>
+    <Summary>Strap in and hang on as one of DC's icons returns to the forefront in a series by red-hot writer Geoff Johns! Spinning out of the pages of GREEN LANTERN: REBIRTH, Hal Jordan returns as the Emerald Warrior, ready to reclaim his life and the light of the Green Lantern.</Summary>
+    <Teams>
+      <Team>
+        <Resources>
+          <Resource source="Comicvine">6992</Resource>
+          <Resource source="Metron">48</Resource>
+        </Resources>
+        <Title>Green Lantern Corps</Title>
+      </Team>
+      <Team>
+        <Resources>
+          <Resource source="Comicvine">55857</Resource>
+          <Resource source="Metron">253</Resource>
+        </Resources>
+        <Title>Manhunters</Title>
+      </Team>
+    </Teams>
+    <Title>Airborne</Title>
+  </Issue>
+  <Meta date="2024-03-05">
+    <Tool version="0.2.0">Kilowog</Tool>
+  </Meta>
+  <Notes>Nothing to note.</Notes>
+  <Pages>
+    <Page doublePage="false" filename="Green-Lantern-v4_#001_00.jpg" height="3056" index="0" size="1234567" type="Front Cover" width="1988"/>
+    <Page doublePage="true" filename="Green-Lantern-v4_#001_01.jpg" height="3056" index="1" size="1234567" type="Story" width="3976"/>
+    <Page doublePage="false" filename="Green-Lantern-v4_#001_02.jpg" height="3056" index="2" size="1234567" type="Story" width="1988"/>
+    <Page doublePage="false" filename="Green-Lantern-v4_#001_03.jpg" height="3056" index="3" size="1234567" type="Back Cover" width="1988"/>
+  </Pages>
+</Metadata>

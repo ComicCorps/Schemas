@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Metadata">
+    <xs:complexType>
+      <xs:all>
+        <xs:element minOccurs="1" name="Issue" type="issue"/>
+        <xs:element minOccurs="1" name="Meta" type="meta"/>
+        <xs:element minOccurs="0" name="Notes" type="xs:string"/>
+        <xs:element minOccurs="1" name="Pages" type="pageList"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="credit">
+    <xs:all>
+      <xs:element minOccurs="1" name="Creator" type="titledResource"/>
+      <xs:element minOccurs="0" name="Roles" type="roleList"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="issue">
+    <xs:all>
+      <xs:element minOccurs="0" name="Characters" type="characterList"/>
+      <xs:element minOccurs="0" name="CoverDate" type="xs:date"/>
+      <xs:element minOccurs="0" name="Credits" type="creditList"/>
+      <xs:element minOccurs="1" name="Format" type="format" default="Comic"/>
+      <xs:element minOccurs="0" name="Genres" type="genreList"/>
+      <xs:element minOccurs="0" name="Locations" type="locationList"/>
+      <xs:element minOccurs="0" name="Number" type="xs:string"/>
+      <xs:element minOccurs="1" name="PageCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="Resources" type="resourceList"/>
+      <xs:element minOccurs="1" name="Series" type="series"/>
+      <xs:element minOccurs="0" name="StoreDate" type="xs:date"/>
+      <xs:element minOccurs="0" name="StoryArcs" type="storyArcList"/>
+      <xs:element minOccurs="0" name="Summary" type="xs:string"/>
+      <xs:element minOccurs="0" name="Teams" type="teamList"/>
+      <xs:element minOccurs="0" name="Title" type="xs:string"/>
+    </xs:all>
+    <xs:attribute name="language" type="languageCode" default="en"/>
+  </xs:complexType>
+
+  <xs:simpleType name="languageCode">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z][a-z]"/> <!-- ISO 639-1 -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="meta">
+    <xs:all>
+      <xs:element minOccurs="1" name="Tool" type="tool"/>
+    </xs:all>
+    <xs:attribute name="date" type="xs:date" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="titledResource">
+    <xs:all>
+      <xs:element minOccurs="0" name="Resources" type="resourceList"/>
+      <xs:element minOccurs="1" name="Title" type="xs:string"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="page">
+    <xs:attribute name="doublePage" type="xs:boolean" default="false"/>
+    <xs:attribute name="filename" type="xs:string" use="required"/>
+    <xs:attribute name="height" type="xs:int" use="required"/>
+    <xs:attribute name="index" type="xs:int" use="required"/>
+    <xs:attribute name="size" type="xs:long" use="required"/>
+    <xs:attribute name="type" type="pageType" default="Story"/>
+    <xs:attribute name="width" type="xs:int" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="resource">
+    <xs:simpleContent>
+      <xs:extension base="xs:long">
+        <xs:attribute name="source" type="source" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="series">
+    <xs:all>
+      <xs:element minOccurs="1" name="Publisher" type="titledResource"/>
+      <xs:element minOccurs="0" name="Resources" type="resourceList"/>
+      <xs:element minOccurs="0" name="StartYear" type="xs:int"/>
+      <xs:element minOccurs="1" name="Title" type="xs:string"/>
+      <xs:element minOccurs="1" name="Volume" type="xs:int" default="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="storyArc">
+    <xs:all>
+      <xs:element minOccurs="0" name="Number" type="xs:int"/>
+      <xs:element minOccurs="0" name="Resources" type="resourceList"/>
+      <xs:element minOccurs="1" name="Title" type="xs:string"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="tool">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="version" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Enum Types -->
+  <xs:simpleType name="format">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Annual"/>
+      <xs:enumeration value="Comic"/>
+      <xs:enumeration value="Digital Chapter"/>
+      <xs:enumeration value="Graphic Novel"/>
+      <xs:enumeration value="Hardcover"/>
+      <xs:enumeration value="Trade Paperback"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="pageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Advertisement"/>
+      <xs:enumeration value="Back Cover"/>
+      <xs:enumeration value="Editorial"/>
+      <xs:enumeration value="Front Cover"/>
+      <xs:enumeration value="Inner Cover"/>
+      <xs:enumeration value="Letters"/>
+      <xs:enumeration value="Other"/>
+      <xs:enumeration value="Preview"/>
+      <xs:enumeration value="Roundup"/>
+      <xs:enumeration value="Story"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="source">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Comicvine"/>
+      <xs:enumeration value="Grand Comics Database"/>
+      <xs:enumeration value="League of Comic Geeks"/>
+      <xs:enumeration value="Marvel"/>
+      <xs:enumeration value="Metron"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- List Types -->
+  <xs:complexType name="characterList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Character" type="titledResource"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="creditList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Credit" type="credit"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="genreList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Genre" type="titledResource"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="locationList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Location" type="titledResource"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pageList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Page" type="page"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="resourceList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Resource" type="resource"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="roleList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Role" type="titledResource"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="storyArcList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoryArc" type="storyArc"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="teamList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Team" type="titledResource"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

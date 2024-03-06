@@ -1,0 +1,48 @@
+name: Validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-comicinfo:
+    name: Validate ComicInfo
+    strategy:
+      fail-fast: false
+
+    runs-on: ubuntu-latest
+    steps:
+      #-----
+      - name: apt-get update
+        run: sudo apt-get update -y
+      - name: Install xmllint
+        run: sudo apt-get install -y libxml2-utils
+      #-----
+      - name: Validate XSD
+        run: xmllint --noout --schema http://www.w3.org/2009/XMLSchema/XMLSchema.xsd schema/ComicInfo.xsd
+      #-----
+      - name: Validate XSD against XML
+        run: xmllint --noout --schema schema/ComicInfo.xsd schema/ComicInfo.xml
+
+  validate-metadata:
+    name: Validate Metadata
+    strategy:
+      fail-fast: false
+
+    runs-on: ubuntu-latest
+    steps:
+      #-----
+      - name: apt-get update
+        run: sudo apt-get update -y
+      - name: Install xmllint
+        run: sudo apt-get install -y libxml2-utils
+      #-----
+      - name: Validate XSD
+        run: xmllint --noout --schema http://www.w3.org/2009/XMLSchema/XMLSchema.xsd drafts/Metadata.xsd
+      #-----
+      - name: Validate XSD against XML
+        run: xmllint --noout --schema drafts/Metadata.xsd drafts/Metadata.xml
