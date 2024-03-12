@@ -61,14 +61,6 @@
       </Credit>
     </Credits>
     <Format>Comic</Format>
-    <Genres>
-      <Genre>
-        <Resources>
-          <Resource source="Metron">10</Resource>
-        </Resources>
-        <Title>Super-Hero</Title>
-      </Genre>
-    </Genres>
     <Locations>
       <Location>
         <Resources>
@@ -90,6 +82,14 @@
       <Resource source="Metron">9778</Resource>
     </Resources>
     <Series>
+      <Genres>
+        <Genre>
+          <Resources>
+            <Resource source="Metron">10</Resource>
+          </Resources>
+          <Title>Super-Hero</Title>
+        </Genre>
+      </Genres>
       <Publisher>
         <Resources>
           <Resource source="Comicvine">10</Resource>

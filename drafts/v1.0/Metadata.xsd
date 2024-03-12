@@ -25,7 +25,6 @@
       <xs:element minOccurs="0" name="CoverDate" type="xs:date"/>
       <xs:element minOccurs="0" name="Credits" type="creditList"/>
       <xs:element minOccurs="1" name="Format" type="format" default="Comic"/>
-      <xs:element minOccurs="0" name="Genres" type="genreList"/>
       <xs:element minOccurs="0" name="Locations" type="locationList"/>
       <xs:element minOccurs="0" name="Number" type="xs:string"/>
       <xs:element minOccurs="1" name="PageCount" type="xs:int"/>
@@ -80,6 +79,7 @@
 
   <xs:complexType name="series">
     <xs:all>
+      <xs:element minOccurs="0" name="Genres" type="genreList"/>
       <xs:element minOccurs="1" name="Publisher" type="titledResource"/>
       <xs:element minOccurs="0" name="Resources" type="resourceList"/>
       <xs:element minOccurs="0" name="StartYear" type="xs:int"/>

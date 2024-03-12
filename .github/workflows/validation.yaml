@@ -44,7 +44,7 @@ jobs:
         run: sudo apt-get install -y libxml2-utils
       #-----
       - name: Validate XSD
-        run: xmllint --noout --schema http://www.w3.org/2009/XMLSchema/XMLSchema.xsd drafts/Metadata.xsd
+        run: xmllint --noout --schema http://www.w3.org/2009/XMLSchema/XMLSchema.xsd drafts/v1.0/Metadata.xsd
       #-----
       - name: Validate XSD against XML
-        run: xmllint --noout --schema drafts/Metadata.xsd drafts/Metadata.xml
+        run: xmllint --noout --schema drafts/v1.0/Metadata.xsd drafts/v1.0/Metadata.xml
